@@ -8,8 +8,17 @@
 function calculator() {
     let arr = process.argv;
 
+    // passes
     if(!arr[2]){
         return "No operation provided...";
+    }
+
+    if(arr[3] === undefined){
+        return "No numbers provided...";
+    }
+
+    if(arr[2] !== 'plus' && arr[2] !== 'minus'){
+        return "Invalid operation: modulo";
     }
 
     let result = 0;
@@ -32,6 +41,8 @@ function calculator() {
         }
         return result;
     }
+
+    console.log(`arr[2]: ${arr[2]}`);
 }
 
 // Don't change anything below this line.
